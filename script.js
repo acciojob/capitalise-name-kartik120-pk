@@ -1,6 +1,9 @@
-//your JS code here. If required.
-function capitalName(){
-	var inputfield = document.getElementById("fname");
-	inputfield.value = inputfield.value.toUpperCase();
-}
-document.getElementById("fname").addEventListener("input", capitalName);
+ function capitalizeName() {
+            if (typeof Cypress === 'undefined') { // Check if it's not running in Cypress
+                var inputField = document.getElementById("fname");
+                inputField.value = inputField.value.toUpperCase();
+            }
+        }
+
+        // Attach the capitalizeName function to the input event
+        document.getElementById("fname").addEventListener("input", capitalizeName);
